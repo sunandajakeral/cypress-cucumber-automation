@@ -32,10 +32,6 @@ class ComputersHomePage {
           })
       : cy.contains("Nothing to display").should("be.visible");
   }
-
-  clickCancelButton() {
-    cy.get("a").contains("Cancel").click();
-  }
 }
 
 export const computersHomePage = new ComputersHomePage();

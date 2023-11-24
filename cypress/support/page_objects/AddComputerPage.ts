@@ -32,6 +32,14 @@ class AddComputerPage {
     submit() {
       cy.get('input').contains('Create this computer').click();
     }
+
+    clickCancelButton() {
+      cy.get("a").contains("Cancel").click();
+    }
+  
+    verifyErrorMessage(errorMessage) {
+      cy.contains(errorMessage).should("be.visible")
+    }
   }
   
   export const addComputerPage = new AddComputerPage();
